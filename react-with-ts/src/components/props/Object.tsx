@@ -1,8 +1,4 @@
-type ObjectType = {
-  name: string;
-  messageCount?: number;
-  isLoggedIn: boolean;
-};
+import { ObjectType } from "./Object.types";
 
 export const Object = ({ name, messageCount = 10, isLoggedIn }: ObjectType) => {
   return (
