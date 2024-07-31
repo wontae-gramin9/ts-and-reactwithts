@@ -1,3 +1,4 @@
+import { Children, StringChildren } from "./components/props/Children";
 import ListOfNestedObject from "./components/props/ListOfNestedObject";
 import { NestedObject } from "./components/props/NestedObject";
 import { Object } from "./components/props/Object";
@@ -32,6 +33,11 @@ function App() {
       <ListOfNestedObject names={nameList}></ListOfNestedObject>
       <p>----------</p>
       <Status status="success" />
+      <Children>
+        <StringChildren>
+          Here goes the string type children of this component!
+        </StringChildren>
+      </Children>
     </div>
   );
 }
