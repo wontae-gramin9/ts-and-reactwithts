@@ -1,10 +1,10 @@
 type ObjectType = {
   name: string;
-  messageCount: number;
+  messageCount?: number;
   isLoggedIn: boolean;
 };
 
-export const Object = ({ name, messageCount, isLoggedIn }: ObjectType) => {
+export const Object = ({ name, messageCount = 10, isLoggedIn }: ObjectType) => {
   return (
     <div>
       <p>
