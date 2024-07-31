@@ -1,3 +1,5 @@
+import ClickEvent from "./components/event/ClickEvent";
+import Input from "./components/event/Input";
 import { Children, StringChildren } from "./components/props/Children";
 import ListOfNestedObject from "./components/props/ListOfNestedObject";
 import { NestedObject } from "./components/props/NestedObject";
@@ -38,6 +40,10 @@ function App() {
           Here goes the string type children of this component!
         </StringChildren>
       </Children>
+      <ClickEvent
+        handleClick={(event, id) => console.log(event, id)}
+      ></ClickEvent>
+      <Input value="" handleChange={(event) => console.log(event)}></Input>
     </div>
   );
 }
