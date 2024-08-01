@@ -8,6 +8,8 @@ import { Status } from "./components/props/StringLiteral";
 import Css from "./components/style/Container";
 import Box from "./ThemeConsumingBox";
 import { ThemeContextProvider } from "./context/ThemeContext";
+import { UserContextProvider } from "./context/UserContext";
+import User from "./User";
 
 const nameList = [
   {
@@ -53,6 +55,9 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
