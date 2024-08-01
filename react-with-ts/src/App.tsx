@@ -6,6 +6,8 @@ import { NestedObject } from "./components/props/NestedObject";
 import { Object } from "./components/props/Object";
 import { Status } from "./components/props/StringLiteral";
 import Css from "./components/style/Container";
+import Box from "./ThemeConsumingBox";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 const nameList = [
   {
@@ -47,6 +49,10 @@ function App() {
       <Input value="" handleChange={(event) => console.log(event)}></Input>
       <Css styles={{ background: "red" }}></Css>
       {/* 틀린 Css property를 주거나(오타라던지), 맞는 value를 주면(display: 0)이라던지 TS 에러 발생 */}
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
