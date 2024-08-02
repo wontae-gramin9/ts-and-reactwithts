@@ -12,6 +12,7 @@ import { UserContextProvider } from "./context/UserContext";
 import User from "./User";
 import Private from "./auth/Private";
 import Profile from "./auth/Profile";
+import List from "./generic/List";
 
 const nameList = [
   {
@@ -61,6 +62,19 @@ function App() {
         <User />
       </UserContextProvider>
       <Private isLoggedIn={true} component={Profile}></Private>
+
+      <List
+        items={["Batman", "Superman", "Wonder Woman"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} />
+      <List
+        items={[
+          { first: "Wontae", last: "Choi" },
+          { first: "Yuna", last: "Kim" },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }

@@ -47,6 +47,7 @@ const p2: Phone<string> = {
   option: "good",
 };
 
+// 타입 상속
 function tellAS<T extends { as: boolean }>(data: T): boolean {
   // as prop이 없는 data를 대비해 Generic
   return data.as;
