@@ -13,6 +13,7 @@ import User from "./User";
 import Private from "./auth/Private";
 import Profile from "./auth/Profile";
 import List from "./generic/List";
+import RandomNumber from "./components/propRestriction/RandomNumber";
 
 const nameList = [
   {
@@ -75,6 +76,8 @@ function App() {
         ]}
         onClick={(item) => console.log(item)}
       />
+      {/* 처음 봤는데... prop value가 true면 그냥 isPositive로 써도 된다  */}
+      <RandomNumber value={10} isPositive />
     </div>
   );
 }
