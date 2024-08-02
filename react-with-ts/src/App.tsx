@@ -10,6 +10,8 @@ import Box from "./ThemeConsumingBox";
 import { ThemeContextProvider } from "./context/ThemeContext";
 import { UserContextProvider } from "./context/UserContext";
 import User from "./User";
+import Private from "./auth/Private";
+import Profile from "./auth/Profile";
 
 const nameList = [
   {
@@ -58,6 +60,7 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+      <Private isLoggedIn={true} component={Profile}></Private>
     </div>
   );
 }
