@@ -14,6 +14,7 @@ import Private from "./auth/Private";
 import Profile from "./auth/Profile";
 import List from "./generic/List";
 import RandomNumber from "./components/propRestriction/RandomNumber";
+import Text from "./components/polymorphic/Text";
 
 const nameList = [
   {
@@ -78,6 +79,19 @@ function App() {
       />
       {/* 처음 봤는데... prop value가 true면 그냥 isPositive로 써도 된다  */}
       <RandomNumber value={10} isPositive />
+
+      {/* Polymorphic Component: 정말로 h1, p, label html tag로 render된다. */}
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      {/* 정말로 label html태그를 구현한다면, htmlFor도 상속받아야하는데 그러려면
+      React.CompoentProps와 Intersection해야 한다. */}
+      <Text as="label" htmlFor="someId" size="sm">
+        Label
+      </Text>
     </div>
   );
 }
