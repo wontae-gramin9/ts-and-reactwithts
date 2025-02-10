@@ -15,6 +15,7 @@ user = () => {};
 // Instance of class
 class User2 {}
 user = new User2();
+// 위 모든 타입이 전부 Object에 들어간다는 것
 
 // Primitive types like string, number, boolean, symbol, null, undefined
 // are not assignable to object
@@ -22,6 +23,16 @@ user = new User2();
 
 type Grade = "A" | "B" | "C";
 
+// *** TYPE VS INTERFACE
+// 솔직히 말하면, 팀바팀이라 둘이 큰 차이는 없다
+// TypeScript에서의 Interface는 어떤 역할을 하는가?를 먼저 묻자
+// → object가 따라야만 하는 규칙 or 요구사항의 집합
+// 그니까 차이점 1: Interface는 primitive type을 정의할 수 없다.
+// 객체지향에서 쓰는 것들 대부분 쓸 수 있다고 생각하면 된다.
+// 그래서 뭔가 기존의 구조를 상속받아서 확장하고 싶을때, 제약이 많은 type보다
+// interface를 쓸 수 있다.
+
+// 대신 Type은 generic, type guard, conditional type 등의 심화된 도구를 제공한다
 interface Person {
   name: string;
   age: number;
