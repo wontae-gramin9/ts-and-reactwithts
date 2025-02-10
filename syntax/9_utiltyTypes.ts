@@ -24,11 +24,11 @@ interface Score {
   "4": "A" | "B" | "C";
 }
 // 이렇게 hideous한 interface를 만들기 보다
-type Grade = "1" | "2" | "3" | "4";
+type Grade2 = "1" | "2" | "3" | "4";
 type Score2 = "A" | "B" | "C";
 
 const score: Record<
-  Grade,
+  Grade2,
   Score2
   // "1" | "2" | "3" | "4", "A" | "B" | "C"
 > = {
